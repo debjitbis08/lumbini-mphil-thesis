@@ -1,0 +1,56 @@
+\documentclass[fontsize=12bp,oneside]{thesis}
+
+\addbibresource{backmatter/citations.bib}
+
+\title{Post-Colonial Perspectives in\protect\\\textit{The God of Small Things}}
+\author{Lumbini Shill}
+\date{May 2018}
+\institution{SAVITRIBAI PHULE PUNE UNIVERSITY}
+\course{Master Of Philosophy (M.Phil.) in English}
+\guide{Dr ASHOK THORAT}
+\department{Research Center:\protect\\\textbf{Institute Of Advanced Studies In English\protect\\Aundh, Pune}}
+
+\begin{document}
+
+% Double spacing between words
+\newdimen\origiwspc
+\newdimen\origiwstr
+\origiwspc=\fontdimen2\font % original inter word space
+\origiwstr=\fontdimen3\font % original inter word stretch
+\fontdimen3\font=\origiwstr
+\fontdimen2\font=2.5\origiwspc % inter word space
+
+
+\input{frontmatter/title.tex}
+
+\frontmatter
+\input{frontmatter/declaration.tex}
+\input{frontmatter/certificate.tex}
+\input{frontmatter/acknowledgements.tex}
+\input{frontmatter/abstract.tex}
+
+\tableofcontents
+
+\mainmatter
+\input{mainmatter/chapter-1.tex}
+\input{mainmatter/chapter-2.tex}
+
+
+\newpage
+\addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
+\begin{center}
+    \LARGE BIBLIOGRAPHY
+\end{center}
+
+\printbibliography[keyword=primary,heading=subbibliography,%
+title={Primary Sources}]
+
+
+\printbibliography[keyword=secondary,heading=subbibliography,%
+title={Secondary Sources}]
+
+\printbibliography[keyword=online,heading=subbibliography,%
+title={Online Sources}]
+
+
+\end{document}
