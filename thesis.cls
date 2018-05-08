@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{thesis}[2018/05/06 Custom class for IASE thesis]
 
-\LoadClass{report}
+\LoadClass[a4paper]{report}
 
 \RequirePackage{tgtermes}
 \RequirePackage[utf8]{inputenc}
@@ -37,19 +37,21 @@ guessmedium=false
 \setlength{\parskip}{1\baselineskip}
 
 % Line spacing
-\onehalfspacing
+%\onehalfspacing
+%\doublespacing
+\linespread{1.45}
   
 \titleformat{name=\chapter}[display]
-{\bfseries\LARGE\centering}{Chapter \Numberstringnum\thechapter}{1\p@}{\uppercase}[]
+{\bfseries\Large\centering}{Chapter \Numberstringnum\thechapter}{1\p@}{\uppercase}[]
 % https://tex.stackexchange.com/questions/63390/how-to-decrease-spacing-before-chapter-title#63393
 \titlespacing*{\chapter}{0pt}{-50pt}{40pt}
 
 
-%\titleformat{\section}         % Customise the \section command 
-%  {\Large\raggedright}
-%  {\thechapter.\thesection}{1em}                      
-%  {}                           
-%  []                 
+\titleformat{\section}         % Customise the \section command 
+ {\bfseries\large\raggedright}
+ {\thesection}{1em}                      
+ {}                           
+ []                 
 
 \renewcommand*{\nameyeardelim}{\addcomma\space}
 
