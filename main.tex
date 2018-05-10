@@ -59,6 +59,7 @@
 \input{frontmatter/acknowledgements.tex}
 \input{frontmatter/abstract.tex}
 
+\renewcommand{\contentsname}{\LARGE \normalfont CONTENTS}
 \tableofcontents
 
 \mainmatter
@@ -74,9 +75,9 @@
     \LARGE BIBLIOGRAPHY
 \end{center}
 
+\nocite{*}
 \printbibliography[keyword=primary,heading=subbibliography,%
 title={Primary Sources}]
-
 
 \printbibliography[keyword=secondary,heading=subbibliography,%
 title={Secondary Sources}]
